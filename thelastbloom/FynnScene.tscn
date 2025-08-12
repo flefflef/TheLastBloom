@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=4 uid="uid://bq1e84gpieijo"]
+
+[ext_resource type="Texture2D" uid="uid://cxm1vhrccxx2u" path="res://Assets/tileset.png" id="1_lvun7"]
+[ext_resource type="Texture2D" uid="uid://dxh3qffuim111" path="res://Assets/knight.png" id="2_ss1j8"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6ev48"]
+texture = ExtResource("1_lvun7")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_2txdr"]
+sources/0 = SubResource("TileSetAtlasSource_6ev48")
+
+[node name="FynnScene" type="Node2D"]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAACAAIAAAAAAAAAAAADAAIAAAABAAAAAAAEAAIAAAABAAAAAAAFAAIAAAABAAAAAAAGAAIAAAACAAAAAAAGAAMAAAACAAEAAAAGAAQAAAACAAEAAAACAAQAAAAAAAEAAAACAAMAAAAAAAEAAAACAAUAAAAAAAIAAAAFAAUAAAABAAIAAAAGAAUAAAACAAIAAAADAAUAAAABAAIAAAAEAAUAAAABAAIAAAADAAMAAAABAAEAAAAEAAMAAAABAAEAAAAFAAMAAAABAAEAAAAFAAQAAAABAAEAAAAEAAQAAAABAAEAAAADAAQAAAABAAEAAAA=")
+tile_set = SubResource("TileSet_2txdr")
+
+[node name="Knight" type="Sprite2D" parent="."]
+position = Vector2(65, 8)
+texture = ExtResource("2_ss1j8")
+hframes = 4
